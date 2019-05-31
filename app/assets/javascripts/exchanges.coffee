@@ -15,3 +15,9 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false;
+
+$('.invert').click ->
+   source_currency = $('#source_currency').val()
+   target_currency = $('#target_currency').val()
+   $('#source_currency').val(target_currency)
+   $('#target_currency').val(source_currency)
